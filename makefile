@@ -29,7 +29,7 @@ ${HOST_TARGET}: ${HOST_SOURCES} ${CONF}
 	$(CC) -o $@ ${HOST_SOURCES} ${HOST_FLAGS}
 
 ${DPU_TARGET}: ${DPU_SOURCES} ${CONF}
-	dpu-upmem-dpurte-clang ${DPU_FLAGS} -S $@ ${DPU_SOURCES}
+	dpu-upmem-dpurte-clang ${DPU_FLAGS} -o $@ ${DPU_SOURCES}
 
 clean:
 	$(RM) -r $(BUILDDIR)
