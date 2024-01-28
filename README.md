@@ -17,3 +17,5 @@ Differences noticed so far:
 * In the `back` version, the index `i` is incremented after checking the first if statement.
   This makes sense as it will save a couple of wasted additions in case the second if statement is never reached.
   Forcing the addition through adding a dummy variable in which to store `i` does not make this version slower than the other one, though.
+* Curiously, with `-O1` optimisation, there is no significant difference in run times.
+  The total run times are bigger then, of course.
